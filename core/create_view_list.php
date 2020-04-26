@@ -82,16 +82,16 @@ $string .= "\n\t\t\t<td style=\"text-align:center\" width=\"200px\">"
         . "\n\t\t\t\t?>"."
         
         <!-- Button trigger modal -->
-<a href=\"\" data-toggle=\"modal\" data-target=\"#hapus\">
+<a href=\"\" data-toggle=\"modal\" data-target=\"#hapus<? echo $".$c_url."->".$pk." ?>\">
   Hapus
 </a>
 
 <!-- Modal -->
-<div class=\"modal fade\" id=\"hapus\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"hapusLabel\" aria-hidden=\"true\">
+<div class=\"modal fade\" id=\"hapus<? echo $".$c_url."->".$pk." ?>\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"hapusLabel<? echo $".$c_url."->".$pk." ?>\" aria-hidden=\"true\">
   <div class=\"modal-dialog\" role=\"document\">
     <div class=\"modal-content\">
       <div class=\"modal-header\">
-        <h5 class=\"modal-title\" id=\"hapusLabel\">Hapus Data?</h5>
+        <h5 class=\"modal-title\" id=\"hapusLabel<? echo $".$c_url."->".$pk." ?>\">Hapus Data?</h5>
         <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
           <span aria-hidden=\"true\">&times;</span>
         </button>
@@ -101,7 +101,7 @@ $string .= "\n\t\t\t<td style=\"text-align:center\" width=\"200px\">"
       </div>
       <div class=\"modal-footer\">
         <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Batal</button>
-        <?php echo anchor(site_url('".$c_url."/delete/'.$".$c_url."->".$pk."),'Hapus','class=\"btn btn-danger\"')?>
+        <?php echo anchor(base_url('".$c_url."/delete/'.$".$c_url."->".$pk."),'Hapus','class=\"btn btn-danger\"')?>
       </div>
     </div>
   </div>
